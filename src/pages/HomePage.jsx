@@ -31,11 +31,14 @@ const HomePage = () => {
           
           <div className='pokeball'>
             <img className="pokesup" src={Pokeballsup} alt="Poke Tapa" />
+            <div className="screen " >
+              <img className="imgScreen" src={Tablero} alt="Tablero" />
+            </div>
             <img className="pokeinf" src={Pokeballinf} alt="Poke Tapa" />
           </div>
-          <form onSubmit={handleSubmit}>
-              <input ref={inputName} type="text" />
-              <button>Catch them all!</button>
+          <form className='form' onSubmit={handleSubmit}>
+              <input className='input' ref={inputName} type="text" />
+              <button className='btnGo'><i className='go bx bxl-go-lang bx-tada bx-lg'></i></button>
           </form>
       </div>
     </main>

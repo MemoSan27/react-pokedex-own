@@ -37,3 +37,45 @@
     max-width: 25.5rem;
     max-height: 40rem;
 }
+.imgScreen{
+    position: relative;
+    height: 10rem;
+    z-index: 3;
+}
+.pokesup{
+    position: relative;
+    top: 2rem;
+}
+.pokeinf{
+    position: relative;
+    top: -3rem;
+}
+.form{
+    width: 23rem;
+    left: 1.2rem;
+    position: relative;
+    top: -22.7rem;
+    z-index: 5;
+}
+.input{
+    width: 89%;
+    height: 6rem;
+    background-color: transparent;
+    color: yellow;
+    font-size: 3rem;
+    font-family: 'Orbitron', sans-serif;
+}
+.btnGo{
+    border: none;
+    width: 5rem;
+    position: relative;
+    top: -6rem;
+    left: 14.6rem;
+    height: 6rem;
+    background-color: transparent;
+    color: red;
+}
+.go{
+    font-size: 5.6rem !important;
+}
+
