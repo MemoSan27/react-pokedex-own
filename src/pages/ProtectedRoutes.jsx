@@ -9,7 +9,14 @@ const ProtectedRoutes = () => {
     if(trainerName.length > 2) {
         return <Outlet />
     } else {
-        return <Navigate to='/'/>
+        Swal.fire({
+           icon: "error",
+           title: "Please type at least 3 characters in your name",
+           timer: 1500
+        });
+        return (
+        <Navigate to='/'/>
+        )
     }
 
 }
