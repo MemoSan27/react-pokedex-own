@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux"
 import { Navigate, Outlet } from "react-router-dom"
+import Layout from "../layout/Layout"
 
 
 const ProtectedRoutes = () => {
@@ -7,7 +8,7 @@ const ProtectedRoutes = () => {
     const trainerName = useSelector(store => store.trainerName)
   
     if(trainerName.length > 2) {
-        return <Outlet />
+        return <Layout />
     } else {
         Swal.fire({
            icon: "error",

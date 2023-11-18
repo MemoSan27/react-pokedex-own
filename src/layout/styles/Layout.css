@@ -1,0 +1,19 @@
+.yellowbar{
+    min-width: 100vw;
+    height: 10rem;
+    background-color: yellow;
+}
+.blackbar{
+    background-color: black;
+    min-width: 100vw;
+    height: 4rem;
+}
+.footer{
+    background-color: black;
+    min-width: 100vw;
+    height: 40px;
+}
+.outlet{
+    min-height: calc(100vh - 180px);
+    padding: 1rem;
+}
