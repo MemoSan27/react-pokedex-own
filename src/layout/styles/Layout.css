@@ -29,10 +29,9 @@
     border: 10px solid black;
     position: absolute;
     top: 5rem;
-    right: 2.5rem;
+    right: 3rem;
     z-index: 2;
 }
-
 .white__circle2{
     width: 120px;
     height: 120px;
@@ -44,10 +43,9 @@
     border: 10px solid black;
     position: absolute;
     top: -8rem;
-    right: 2.5rem;
+    left: 3rem;
     z-index: 2;
 }
-
 .gray__circle{
     width: 70px;
     height: 70px;
