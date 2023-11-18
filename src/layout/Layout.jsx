@@ -25,7 +25,15 @@ const Layout = () => {
      <Outlet />
     </div>
 
-     <footer className='footer'></footer>
+    
+
+     <footer className='footer'>
+     <div className='white__circle2'>
+        <div className='gray__circle'>
+            <img className='pikachu' src={Pikachu} alt='Gif Pikachu' />
+        </div>
+     </div>
+     </footer>
     </>
   )
 }
