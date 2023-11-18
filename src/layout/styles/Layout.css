@@ -17,3 +17,54 @@
     min-height: calc(100vh - 180px);
     padding: 1rem;
 }
+.white__circle{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,rgb(223,226,208),rgb(8,8,8));
+    border-radius: 50%;
+    border: 10px solid black;
+    position: absolute;
+    top: 5rem;
+    right: 2.5rem;
+    z-index: 2;
+}
+.gray__circle{
+    width: 70px;
+    height: 70px;
+    background-color: #fc0505;
+    border-radius: 50%;
+    border: 10px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(at center,rgb(121,3,3),red)
+}
+.pikachu{
+    width: 100%;
+    position: relative;
+    top: 4px;
+    left: 0;
+    animation: pokemon 2s 1 linear;
+    z-index: 100;
+    transition: transform 1s;
+}
+.pikachu:hover{
+    transform: scale(2);
+}
+@keyframes pokemon {
+    0% {
+        scale: .3
+    }
+
+    50% {
+        scale: .7
+    }
+
+    to {
+        scale: 1
+    }
+}
+
