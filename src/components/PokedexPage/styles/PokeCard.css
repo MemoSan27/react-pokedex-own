@@ -1,0 +1,16 @@
+.card{
+    border: 3px solid black;
+    max-width: 90%;
+    padding: 1rem;
+    border-radius: 3rem;
+    transition: transform 500ms;
+}
+@media ( min-width: 768px ) { 
+    .card{
+        width: 32rem;
+    }
+}
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}

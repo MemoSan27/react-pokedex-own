@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import useFetch from "../../hooks/useFetch"
 import { useNavigate } from "react-router-dom"
+import './styles/PokeCard.css'
 
 const PokeCard = ({ url }) => {
 
@@ -18,7 +19,7 @@ const PokeCard = ({ url }) => {
 
   
   return (
-   <article onClick={handleNavigate}>
+   <article className="card" onClick={handleNavigate}>
     <header>
       <img src={infoPoke?.sprites.other["official-artwork"].front_default} alt="" />
     </header>

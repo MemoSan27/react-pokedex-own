@@ -78,3 +78,9 @@
 .pokemons__container{
     margin-top: 4rem;
 }
+.pokemons__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
