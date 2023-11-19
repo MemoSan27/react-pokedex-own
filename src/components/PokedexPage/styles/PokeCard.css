@@ -6,7 +6,9 @@
     overflow: hidden;
     border-radius: 3rem;
     transition: transform 500ms;
-    
+}
+.card:hover{
+    box-shadow: -5px -5px 23px 5px rgba(0,0,0,0.3);
 }
 .card__img{
     animation: pokemon 2s 1 linear;
