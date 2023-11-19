@@ -5,6 +5,8 @@
     border-radius: 1rem;
     font-family: 'Orbitron', sans-serif;
     padding-left: 2rem;
+    border: 3px solid grey;
+    font-weight: 900;
 }
 .select__type:focus-within{
     box-shadow: 1rem 1rem 25.2rem 0rem rgba(223,254,119,0.75);

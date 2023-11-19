@@ -35,7 +35,7 @@
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
-    border: 1px solid grey;
+    border: 3px solid grey;
 }
 .input__search{
     position: absolute;

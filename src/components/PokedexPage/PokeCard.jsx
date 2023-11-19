@@ -163,7 +163,7 @@ const getColor = (index = 0) => {
           infoPoke?.types.map((infoType, index) => (
             <li key={infoType.type.url}>
               <div style={{ backgroundColor: getBackground(index) }} className="type__box">
-                <p style={{ color: getColor(index) }} className="type__name">{infoType.type.name}</p>
+                <p style={{ color: getColor(index) }} className="type__name">{infoType.type.name.toUpperCase()}</p>
               </div>
             </li>
           ))
