@@ -140,7 +140,7 @@ const getColor = (index = 0) => {
 
   
   return (
-   <article  className="card" onClick={handleNavigate}>
+   <article className="card" onClick={handleNavigate}>
     <header style={{ backgroundColor: getBackground() }} className="header">
       <h3 style={{ color: getColor() }} className="card__poke-name"> 
         <Typewriter
@@ -176,6 +176,7 @@ const getColor = (index = 0) => {
             <li key={infoStat.stat.url}>
               <span style={{ color: getColor() }} className="card__span span__name">{infoStat.stat.name}</span>
               <span style={{ color: getColor() }} className="card__span span__stat">{infoStat.base_stat}</span>
+              { console.log(infoStat) }
             </li>
           ))
         }
