@@ -152,7 +152,7 @@ const getColor = (index = 0) => {
                               }}
                           />
       </h3>
-      <div style={{ backgroundColor: getBackground() }} className="circ">
+      <div className="circ">
         <img className="card__img" src={infoPoke?.sprites.other["official-artwork"].front_default} alt="Img Pokemon" />
       </div>
     </header>
