@@ -76,6 +76,8 @@
     }
 }
 .pokemons__container{
+    max-width: 150rem;
+    margin: 0 auto;
     margin-top: 4rem;
 }
 .pokemons__container{

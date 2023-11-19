@@ -101,7 +101,11 @@ const PokeCard = ({ url }) => {
       <ul>
         {
           infoPoke?.types.map(infoType => (
-            <li key={infoType.type.url}>{infoType.type.name}</li>
+            <li key={infoType.type.url}>
+              <div style={{ backgroundColor: getBackground() }} className="type__box">
+                {infoType.type.name}
+              </div>
+            </li>
           ))
         }
       </ul>
