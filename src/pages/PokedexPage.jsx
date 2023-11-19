@@ -19,6 +19,7 @@ const PokedexPage = () => {
     if(selectValue=== 'allPokemons'){
     getPokemons()  
     }else{
+      setInputValue('');
       getByTypePokemon(selectValue)
     }
       
@@ -29,6 +30,7 @@ const PokedexPage = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
+    setSelectValue('allPokemons');
     setInputValue(inputSearch.current.value.toLowerCase().trim())
     inputSearch.current.value = ''
   }
@@ -48,7 +50,7 @@ const PokedexPage = () => {
             <p className="pokepage__welcome h2"> Here, you can search by <span className="pokepage__trainer h2"> name </span> </p>
             <div className="div">
               <input className="input__search" ref={inputSearch} type="text" />
-              <button className="btn__search"><i class='glass bx bx-search-alt-2'></i></button>
+              <button className="btn__search"><i className='glass bx bx-search-alt-2'></i></button>
             </div>
             
           </div>

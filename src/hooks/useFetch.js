@@ -20,6 +20,7 @@ const getTypeApi = (urlType) => {
             results: res.data.pokemon.map(e => e.pokemon)
         }
         setInfoApi(obj)
+        
     })
     .catch(err => console.log(err))
 }
