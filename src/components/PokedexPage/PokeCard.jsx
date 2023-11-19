@@ -153,7 +153,7 @@ const getColor = (index = 0) => {
                           />
       </h3>
       <div style={{ backgroundColor: getBackground() }} className="circ">
-        <img className="card__img" src={infoPoke?.sprites.other["official-artwork"].front_default} alt="" />
+        <img className="card__img" src={infoPoke?.sprites.other["official-artwork"].front_default} alt="Img Pokemon" />
       </div>
     </header>
     <section className="info">
@@ -170,12 +170,12 @@ const getColor = (index = 0) => {
         }
       </ul>
       <br></br>
-      <ul>
+      <ul className="card__stats">
         {
           infoPoke?.stats.map(infoStat => (
             <li key={infoStat.stat.url}>
-              <span>{infoStat.stat.name}</span>
-              <span>{infoStat.base_stat}</span>
+              <span style={{ color: getColor() }} className="card__span span__name">{infoStat.stat.name}</span>
+              <span style={{ color: getColor() }} className="card__span span__stat">{infoStat.base_stat}</span>
             </li>
           ))
         }

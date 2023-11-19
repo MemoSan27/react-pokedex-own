@@ -2,7 +2,7 @@
     border: 3px solid gray;
     max-width: 30rem;
     width: 90%;
-    height: 38rem;
+    height: 40rem;
     overflow: hidden;
     border-radius: 3rem;
     transition: transform 500ms;
@@ -46,7 +46,7 @@
 .info{
     position: relative;
     top: 20%;
-    height: 50%;
+    height: 40%;
 }
 .circ{
     border-radius: 50%;
@@ -58,7 +58,7 @@
     box-shadow: -5px -5px 23px 5px rgba(128,128,12,0.75);
 }
 .card__footer{
-    height: 22%;
+    height: 33%;
     
     
 }
@@ -90,4 +90,30 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+}
+.card__span{
+    display: block;
+}
+.card__stats{
+    display: flex;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 24rem;
+    margin: 0 auto;
+    margin-top: 1.9rem;
+}
+.span__name{
+    font-family: 'Lato', sans-serif;    
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 900;
+    
+}
+.span__stat{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
 }
