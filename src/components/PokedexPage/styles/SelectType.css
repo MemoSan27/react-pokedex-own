@@ -7,5 +7,5 @@
     padding-left: 2rem;
 }
 .select__type:focus-within{
-    box-shadow: 10px 10px 252px 0px rgba(223,254,119,0.75);
+    box-shadow: 1rem 1rem 25.2rem 0rem rgba(223,254,119,0.75);
 }

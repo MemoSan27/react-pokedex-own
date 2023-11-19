@@ -14,13 +14,13 @@
 .home__logo{
     margin-top: 8rem;
     margin-bottom: 10rem;
-    width: 80%;
+    width: 65%;
     animation: gira 6s infinite;
     transition: filter 2s;
 }
 @media ( min-width: 1200px ) { 
     .home__logo{
-        width: 50%;
+        width: 45%;
     }
 }
 @keyframes gira {
@@ -91,7 +91,7 @@
     padding: 2rem 0 !important;
     background-color: rgba(0, 0, 0, 0.4) !important;
     border: 3px solid white;
-    box-shadow: 11px 10px 79px 0px rgba(0,0,0,0.75);
+    box-shadow: 1.1rem 1rem 7.9rem 0rem rgba(0,0,0,0.75);
     filter: blur(0.3px);
 }
 .swal2-popup .swal2-styled{

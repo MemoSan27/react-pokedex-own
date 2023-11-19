@@ -49,7 +49,7 @@
     transition: box-shadow 300ms;
 }
 .div:focus-within{
-    box-shadow: 10px 10px 252px 0px rgba(223,254,119,0.75);
+    box-shadow: 1rem 1rem 25.2rem 0rem rgba(223,254,119,0.75);
 }
 .btn__search{
     position: absolute;
