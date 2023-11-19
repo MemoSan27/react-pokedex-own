@@ -54,12 +54,13 @@ const PokedexPage = () => {
             </div>
             
           </div>
+        
+          <div className="select__container">
+            <p className="pokepage__welcome h2"> ...Or here you can choose the <span className="pokepage__trainer h2"> type </span>  </p>
+              <SelectType
+              setSelectValue={setSelectValue} />
+          </div>
         </form>
-        <div className="select__container">
-        <p className="pokepage__welcome h2"> ...Or here you can choose the <span className="pokepage__trainer h2"> type </span>  </p>
-          <SelectType
-          setSelectValue={setSelectValue} />
-        </div>
       </div>
       <div className="pokemons__container">
         {

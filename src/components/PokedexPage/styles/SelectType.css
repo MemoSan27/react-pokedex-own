@@ -6,3 +6,6 @@
     font-family: 'Orbitron', sans-serif;
     padding-left: 2rem;
 }
+.select__type:focus-within{
+    box-shadow: 10px 10px 252px 0px rgba(223,254,119,0.75);
+}
