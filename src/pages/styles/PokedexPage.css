@@ -1,0 +1,64 @@
+.pokepage__container{
+    display: flex;
+    flex-direction: column;
+    max-width: 70rem;
+    margin: 0 auto;
+    align-items: center;
+    gap: 3rem;
+}
+.pokepage__welcome{
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+}
+.pokepage__trainer{
+    font-family: 'Orbitron', sans-serif;
+    color: #fc0505;
+    font-weight: 900;
+    font-size: 4.5rem;
+}
+.input__container,
+.select__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.h2{
+    font-size: 2rem;
+}
+.div{
+    margin-top: 1rem;
+    background-color: transparent;
+    width: 100%;
+    height: 5rem;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid grey;
+}
+.input__search{
+    position: absolute;
+    height: 100%;
+    width: 85%;
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+}
+.btn__search{
+    position: absolute;
+    height: 100%;
+    right: 0;
+    width: 15%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.glass{
+    font-size: 3rem;
+}
+.pokemons__container{
+    margin-top: 4rem;
+}

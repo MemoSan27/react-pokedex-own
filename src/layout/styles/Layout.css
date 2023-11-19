@@ -16,42 +16,43 @@
 }
 .outlet{
     min-height: calc(100vh - 180px);
-    padding: 1rem;
+    padding: 4rem 5rem 10rem 5rem;
 }
 .white__circle{
-    width: 120px;
-    height: 120px;
+    width: 12rem;
+    height: 12rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to bottom,rgb(223,226,208),rgb(8,8,8));
     border-radius: 50%;
-    border: 10px solid black;
+    border: 1rem solid black;
     position: absolute;
     top: 5rem;
     right: 3rem;
     z-index: 2;
+    
 }
 .white__circle2{
-    width: 120px;
-    height: 120px;
+    width: 12rem;
+    height: 12rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to bottom,rgb(223,226,208),rgb(8,8,8));
     border-radius: 50%;
-    border: 10px solid black;
+    border: 1rem solid black;
     position: absolute;
     top: -8rem;
     left: 3rem;
     z-index: 2;
 }
 .gray__circle{
-    width: 70px;
-    height: 70px;
+    width: 7rem;
+    height: 7rem;
     background-color: #fc0505;
     border-radius: 50%;
-    border: 10px solid black;
+    border: 1rem solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +61,7 @@
 .pikachu{
     width: 100%;
     position: relative;
-    top: 4px;
+    top: 0.4rem;
     left: 0;
     animation: pokemon 2s 1 linear;
     z-index: 100;

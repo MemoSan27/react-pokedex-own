@@ -3,6 +3,7 @@ import useFetch from "../hooks/useFetch"
 import { useEffect, useRef, useState } from "react"
 import PokeCard from "../components/PokedexPage/PokeCard"
 import SelectType from "../components/PokedexPage/SelectType"
+import './styles/PokedexPage.css'
 
 const PokedexPage = () => {
 
@@ -40,14 +41,25 @@ const PokedexPage = () => {
  
   return (
     <div>
-      <p>welcome <span>{ trainerName }</span>, here select your favorite pokemon, let's go!</p>
-      <form onSubmit={handleSubmit}> 
-        <input ref={inputSearch} type="text" />
-        <button>Search</button>
-      </form>
-      <SelectType
-      setSelectValue={setSelectValue} />
-      <div>
+      <div className="pokepage__container">
+        <p className="pokepage__welcome">Welcome <span className="pokepage__trainer">"{ trainerName }"</span>, here select your favorite pokemon, let's go!</p>
+        <form className="pokepage__form" onSubmit={handleSubmit}> 
+          <div className="input__container">
+            <p className="pokepage__welcome h2"> Here, you can search by <span className="pokepage__trainer h2"> name </span> </p>
+            <div className="div">
+              <input className="input__search" ref={inputSearch} type="text" />
+              <button className="btn__search"><i class='glass bx bx-search-alt-2'></i></button>
+            </div>
+            
+          </div>
+        </form>
+        <div className="select__container">
+        <p className="pokepage__welcome h2"> ...Or here you can choose the <span className="pokepage__trainer h2"> type </span>  </p>
+          <SelectType
+          setSelectValue={setSelectValue} />
+        </div>
+      </div>
+      <div className="pokemons__container">
         {
           pokemons?.results.filter(cbfilter).map(poke =>(
             <PokeCard
