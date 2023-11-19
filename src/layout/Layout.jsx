@@ -3,12 +3,13 @@ import { Outlet } from 'react-router-dom'
 //import Pokedexlogo from '../img/poketitle.png'
 import './styles/Layout.css'
 import Pikachu from '../assets/img/pikachugif.gif';
+import Pokedexlogo from '../assets/img/poketitle.png'
 
 const Layout = () => {
   return (
     <>
      <div className='yellowbar'>
-        {/* <img className='imgYb' src={Pokedexlogo} alt='Pokedex Logo' /> */}
+        <img className='pokelogo' src={Pokedexlogo} alt='Pokedex Logo' />
      </div>
 
      <div className='white__circle'>

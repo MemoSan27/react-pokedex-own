@@ -3,6 +3,13 @@
     height: 10rem;
     background-color: yellow;
 }
+@media ( min-width: 678px ) { 
+    .yellowbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 .blackbar{
     background-color: black;
     min-width: 100vw;
@@ -83,4 +90,47 @@
         scale: 1
     }
 }
-
+.pokelogo{
+    width: 20.28rem;
+    height: 3.63rem;
+    position: relative;
+    top: 6.3rem;
+    margin-left: 2rem;
+    animation: gira 6s infinite;
+}
+@media ( min-width: 678px ) { 
+    .pokelogo{
+        animation: none;
+        animation: gira2 6s infinite;
+        position: static;
+        margin-left: 0;
+        
+    }
+}
+@media ( max-width: 370px ) { 
+    .pokelogo{
+        display: none;
+    }
+}
+@keyframes gira {
+    0%{
+        transform: rotateY(0) scale(1.1);
+    }
+    50%{
+        transform: rotateY(180deg) scale(1.1);
+    }
+    100%{
+        transform: rotateY(360deg) scale(1.1);
+    }
+}
+@keyframes gira2 {
+    0%{
+        transform: rotateY(0) scale(1.7);
+    }
+    50%{
+        transform: rotateY(180deg) scale(1.7);
+    }
+    100%{
+        transform: rotateY(360deg) scale(1.7);
+    }
+}
