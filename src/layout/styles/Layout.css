@@ -18,8 +18,13 @@
 .footer{
     background-color: black;
     min-width: 100vw;
-    height: 6rem;
+    height: 9rem;
     position: relative;
+}
+@media ( min-width: 500px ) { 
+    .footer{
+        height: 6rem;
+    }   
 }
 .outlet{
     min-height: calc(100vh - 180px);
