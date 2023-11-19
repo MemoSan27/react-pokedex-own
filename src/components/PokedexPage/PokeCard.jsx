@@ -18,8 +18,8 @@ const PokeCard = ({ url }) => {
     navigate(`/pokedex/${infoPoke.id}`)
   }
 
-  const getBackground = () => {
-    let type = infoPoke?.types?.[0].type.name;
+  const getBackground = (index = 0) => {
+    let type = infoPoke?.types?.[index].type.name;
     switch (type) {
         case "normal":
             return "#b19176"
@@ -78,11 +78,71 @@ const PokeCard = ({ url }) => {
     }
 }
 
+const getColor = (index = 0) => {
+  let type = infoPoke?.types?.[index].type.name;
+  switch (type) {
+      case "normal":
+          return "rgb(255,255,255)"
+          break;
+      case "fighting":
+          return "rgb(255,255,255)"
+          break;
+      case "flying":
+          return "rgb(255,255,255)"
+          break;
+      case "poison":
+          return "rgb(255,255,255)"
+          break;
+      case "ground":
+          return "rgb(255,255,255)"
+          break;
+      case "rock":
+          return "rgb(255,255,255)"
+          break;
+      case "bug":
+          return "rgb(255,255,255)"
+          break;
+      case "ghost":
+          return "rgb(255,255,255)"
+          break;
+      case "steel":
+          return "rgb(0,0,0)"
+          break;
+      case "fire":
+          return "rgb(255,255,255)"
+          break;
+      case "water":
+          return "rgb(255,255,255)"
+          break;
+      case "grass":
+          return "rgb(105,105,105)"
+          break;
+      case "electric":
+          return "rgb(255,255,255)"
+          break;
+      case "psychic":
+          return "rgb(255,255,255)"
+          break;
+      case "ice":
+          return "rgb(0,0,0)"
+          break;
+      case "dragon":
+          return "rgb(255,255,255)"
+          break;
+      case "dark":
+          return "rgb(255,255,255)"
+          break;
+      case "fairy":
+          return "rgb(0,0,0)"
+          break
+  }
+}
+
   
   return (
    <article  className="card" onClick={handleNavigate}>
     <header style={{ backgroundColor: getBackground() }} className="header">
-      <h3 className="card__poke-name"> 
+      <h3 style={{ color: getColor() }} className="card__poke-name"> 
         <Typewriter
                               options={{
                                   strings: [  `${infoPoke?.name}`, 
@@ -98,12 +158,12 @@ const PokeCard = ({ url }) => {
     </header>
     <section className="info">
       
-      <ul>
+      <ul className="type__ul">
         {
-          infoPoke?.types.map(infoType => (
+          infoPoke?.types.map((infoType, index) => (
             <li key={infoType.type.url}>
-              <div style={{ backgroundColor: getBackground() }} className="type__box">
-                {infoType.type.name}
+              <div style={{ backgroundColor: getBackground(index) }} className="type__box">
+                <p style={{ color: getColor(index) }} className="type__name">{infoType.type.name}</p>
               </div>
             </li>
           ))

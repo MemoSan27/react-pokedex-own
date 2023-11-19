@@ -44,7 +44,6 @@
 .info{
     position: relative;
     top: 20%;
-    left: 5%;
     height: 50%;
 }
 .circ{
@@ -69,7 +68,18 @@
 }
 .type__box{
     margin-top: 1rem;
-    border: 1px solid black;
+    
     display: inline-block;
     padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+.type__name{
+    font-size: 2rem;
+    
+}
+.type__ul{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
