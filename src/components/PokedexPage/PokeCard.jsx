@@ -20,11 +20,14 @@ const PokeCard = ({ url }) => {
   
   return (
    <article className="card" onClick={handleNavigate}>
-    <header>
-      <img src={infoPoke?.sprites.other["official-artwork"].front_default} alt="" />
-    </header>
-    <section>
+    <header className="header">
       <h3>{infoPoke?.name}</h3>
+      <div className="circ">
+        <img className="card__img" src={infoPoke?.sprites.other["official-artwork"].front_default} alt="" />
+      </div>
+    </header>
+    <section className="info">
+      
       <ul>
         {
           infoPoke?.types.map(infoType => (

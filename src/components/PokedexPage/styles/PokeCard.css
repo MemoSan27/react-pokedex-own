@@ -1,16 +1,50 @@
 .card{
     border: 3px solid black;
-    max-width: 90%;
-    padding: 1rem;
+    max-width: 30rem;
+    width: 90%;
+    height: 38rem;
+    overflow: hidden;
     border-radius: 3rem;
     transition: transform 500ms;
+    
 }
-@media ( min-width: 768px ) { 
-    .card{
-        width: 32rem;
+.card__img{
+    animation: pokemon 2s 1 linear;
+    position: relative;
+}
+@keyframes pokemon {
+    0% {
+        scale: .3
+    }
+
+    50% {
+        scale: .7
+    }
+
+    to {
+        scale: 1;
     }
 }
 .card:hover{
     cursor: pointer;
     transform: scale(1.05);
+}
+.header{
+    background-color: yellow;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info{
+    position: relative;
+    top: 30%;
+}
+.circ{
+    border-radius: 50%;
+    width: 40%;
+    height: 100%;
+    border: 1px solid black;
+    position: relative;
+    top: 40%;
 }
