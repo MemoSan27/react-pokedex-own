@@ -5,12 +5,26 @@
     margin-top: 7rem;
     border-radius: 3rem;
     padding: 5rem 0;
-   
+    position: relative;
 }
 .poke-info__img{
-    width: 35%;
+    width: 50%;
     margin: 0 auto;
+    
+}
+@media ( min-width: 768px ) { 
+    .poke-info__img{
+        width: 65%;
+    }
+}
+.poke-info__pic{
     animation: pokemon 2s 1 linear;
+    margin: 0 0 0 30%;
+}
+@media ( min-width: 768px ) { 
+    .poke-info__pic{
+        margin: 0 0 0 15%;
+    }
 }
 @keyframes pokemon {
     0% {
@@ -42,5 +56,78 @@
 @media ( min-width: 1200px ) { 
     .poke-info__name{
         font-size: 10rem;
+    }
+}
+.poke-info__height{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    text-align: center;
+    width: 8rem;
+    padding: .5rem;
+    background-color: #ffffff6c;
+    border-radius: 0 10px 10px 0;
+    perspective: 900px;
+    perspective-origin: center
+}
+@media ( min-width: 768px ) { 
+    .poke-info__height{
+        width: 10rem;
+    }
+}
+@media ( min-width: 1200px ) { 
+    .poke-info__height{
+        width: 15rem;
+    }
+}
+.avatar{
+    filter: grayscale();
+    max-width: 80%;
+    margin: 1rem;
+    animation: avatar 6s infinite linear;
+    position: relative;
+    z-index: 102;
+}
+@keyframes avatar {
+    0% {
+        transform: rotateY(0)
+    }
+
+    50% {
+        transform: rotateY(180deg)
+    }
+
+    to {
+        transform: rotateY(360deg)
+    }
+}
+.poke-info__desc{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+@media ( min-width: 768px ) { 
+    .poke-info__desc{
+        font-size: 2rem;
+    }
+}
+@media ( min-width: 1200px ) { 
+    .poke-info__height{
+       font-size: 2.5rem;
+    }
+}
+.poke-info__info{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+@media ( min-width: 768px ) { 
+    .poke-info__info{
+        font-size: 2rem;
+    }
+}
+@media ( min-width: 1200px ) { 
+    .poke-info__info{
+       font-size: 2.5rem;
     }
 }

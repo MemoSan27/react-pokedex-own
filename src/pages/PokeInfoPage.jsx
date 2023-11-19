@@ -18,7 +18,13 @@ const PokeInfoPage = () => {
     getPokemon()
   },[])
 
-  console.log(pokemon);
+  const getImage = () => {
+    if (pokemon?.sprites?.other.dream_world.front_default) {
+        return pokemon?.sprites?.other.dream_world.front_default
+    } else {
+        return pokemon?.sprites?.other.home.front_default
+    }
+}
 
   return (
     <div style={{ backgroundColor: getBackground(0, pokemon) }} className="poke-info__container">
@@ -33,7 +39,14 @@ const PokeInfoPage = () => {
                                 }}
                             />
         </h1>
-        <img src={pokemon?.sprites.other["official-artwork"].front_default} alt=""></img>
+        <div className="poke-info__height">
+          <img className='avatar' src={getImage()} alt="" />
+          <p style={{ color: getColor(0, pokemon) }} className="poke-info__desc"> Height:</p>                      
+          <p style={{ color: getColor(0, pokemon) }} className="poke-info__info"> {pokemon?.height} "</p>                      
+          <p style={{ color: getColor(0, pokemon) }} className="poke-info__desc"> Weight: </p>                      
+          <p style={{ color: getColor(0, pokemon) }} className="poke-info__info"> {pokemon?.weight} pounds </p>                      
+        </div>
+        <img className="poke-info__pic" src={pokemon?.sprites.other["official-artwork"].front_default} alt=""></img>
       </div>
     </div>
   )
