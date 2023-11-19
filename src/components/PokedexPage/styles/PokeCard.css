@@ -11,6 +11,10 @@
 .card__img{
     animation: pokemon 2s 1 linear;
     position: relative;
+    transition: transform 700ms ease-in-out;
+}
+.card__img:hover{
+    transform: scale(1.5);
 }
 @keyframes pokemon {
     0% {
