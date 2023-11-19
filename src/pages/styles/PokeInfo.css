@@ -4,8 +4,43 @@
     margin: 0 auto;
     margin-top: 7rem;
     border-radius: 3rem;
+    padding: 5rem 0;
+   
 }
 .poke-info__img{
-    width: 40%;
+    width: 35%;
     margin: 0 auto;
+    animation: pokemon 2s 1 linear;
+}
+@keyframes pokemon {
+    0% {
+        scale: .3
+    }
+
+    50% {
+        scale: .7
+    }
+
+    to {
+        scale: 1;
+    }
+}
+.poke-info__name{
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+@media ( min-width: 768px ) { 
+    .poke-info__name{
+        font-size: 7rem;
+    }
+}
+@media ( min-width: 1200px ) { 
+    .poke-info__name{
+        font-size: 10rem;
+    }
 }
