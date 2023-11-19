@@ -1,5 +1,5 @@
 .card{
-    border: 3px solid black;
+    border: 3px solid gray;
     max-width: 30rem;
     width: 90%;
     height: 38rem;
@@ -30,7 +30,7 @@
     transform: scale(1.05);
 }
 .header{
-    background-color: yellow;
+    
     height: 30%;
     display: flex;
     flex-direction: column;
@@ -46,14 +46,14 @@
     border-radius: 50%;
     width: 40%;
     height: 100%;
-    border: 1px solid black;
+    border: 4px solid yellow;
     position: relative;
     top: 25%;
-    background-color: red;
+    box-shadow: -5px -5px 23px 5px rgba(128,128,12,0.75);
 }
 .card__footer{
-    height: 20%;
-    background-color: yellow;
+    height: 22%;
+    
     
 }
 .card__poke-name{

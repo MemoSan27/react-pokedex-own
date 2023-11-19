@@ -18,10 +18,70 @@ const PokeCard = ({ url }) => {
     navigate(`/pokedex/${infoPoke.id}`)
   }
 
+  const getBackground = () => {
+    let type = infoPoke?.types?.[0].type.name;
+    switch (type) {
+        case "normal":
+            return "#b19176"
+            break;
+        case "fighting":
+            return "#c03636"
+            break;
+        case "flying":
+            return "#568aa8"
+            break;
+        case "poison":
+            return "#964bc2"
+            break;
+        case "ground":
+            return "#722f03"
+            break;
+        case "rock":
+            return "#81404b"
+            break;
+        case "bug":
+            return "#0fccb3"
+            break;
+        case "ghost":
+            return "#cd40f8"
+            break;
+        case "steel":
+            return "#d6d3d3"
+            break;
+        case "fire":
+            return "#F8B78B"
+            break;
+        case "water":
+            return "#2697f3"
+            break;
+        case "grass":
+            return "greenyellow"
+            break;
+        case "electric":
+            return "#caaf36"
+            break;
+        case "psychic":
+            return "#fa7e93"
+            break;
+        case "ice":
+            return "#b9e3f3"
+            break;
+        case "dragon":
+            return "#fa4801"
+            break;
+        case "dark":
+            return "gray"
+            break;
+        case "fairy":
+            return "pink"
+            break
+    }
+}
+
   
   return (
-   <article className="card" onClick={handleNavigate}>
-    <header className="header">
+   <article  className="card" onClick={handleNavigate}>
+    <header style={{ backgroundColor: getBackground() }} className="header">
       <h3 className="card__poke-name"> 
         <Typewriter
                               options={{
@@ -32,7 +92,7 @@ const PokeCard = ({ url }) => {
                               }}
                           />
       </h3>
-      <div className="circ">
+      <div style={{ backgroundColor: getBackground() }} className="circ">
         <img className="card__img" src={infoPoke?.sprites.other["official-artwork"].front_default} alt="" />
       </div>
     </header>
@@ -57,7 +117,7 @@ const PokeCard = ({ url }) => {
         }
       </ul>
     </section>
-    <div className="card__footer">
+    <div style={{ backgroundColor: getBackground() }} className="card__footer">
 
     </div>
    </article>
