@@ -38,7 +38,9 @@
 }
 .info{
     position: relative;
-    top: 30%;
+    top: 20%;
+    left: 5%;
+    height: 50%;
 }
 .circ{
     border-radius: 50%;
@@ -46,5 +48,16 @@
     height: 100%;
     border: 1px solid black;
     position: relative;
-    top: 40%;
+    top: 25%;
+    background-color: red;
+}
+.card__footer{
+    height: 20%;
+    background-color: yellow;
+    
+}
+.card__poke-name{
+    margin-top: 1rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
 }

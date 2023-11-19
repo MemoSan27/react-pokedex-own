@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import useFetch from "../../hooks/useFetch"
 import { useNavigate } from "react-router-dom"
 import './styles/PokeCard.css'
+import Typewriter from 'typewriter-effect';
 
 const PokeCard = ({ url }) => {
 
@@ -21,7 +22,16 @@ const PokeCard = ({ url }) => {
   return (
    <article className="card" onClick={handleNavigate}>
     <header className="header">
-      <h3>{infoPoke?.name}</h3>
+      <h3 className="card__poke-name"> 
+        <Typewriter
+                              options={{
+                                  strings: [  `${infoPoke?.name}`, 
+                                              ],
+                                  autoStart: true,
+                                  loop: true,
+                              }}
+                          />
+      </h3>
       <div className="circ">
         <img className="card__img" src={infoPoke?.sprites.other["official-artwork"].front_default} alt="" />
       </div>
@@ -35,7 +45,7 @@ const PokeCard = ({ url }) => {
           ))
         }
       </ul>
-      <hr />
+      <br></br>
       <ul>
         {
           infoPoke?.stats.map(infoStat => (
@@ -47,6 +57,9 @@ const PokeCard = ({ url }) => {
         }
       </ul>
     </section>
+    <div className="card__footer">
+
+    </div>
    </article>
   )
 }
