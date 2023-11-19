@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import useFetch from "../hooks/useFetch";
 import { useEffect } from "react";
+import './styles/PokeInfo.css'
 
 const PokeInfoPage = () => {
 
@@ -16,9 +17,10 @@ const PokeInfoPage = () => {
   console.log(pokemon);
 
   return (
-    <div>
-      <h1>SetInfoPage</h1>
-      <img src={pokemon?.sprites.other["official-artwork"].front_default} alt=""></img>
+    <div className="poke-info__container">
+      <div className="poke-info__img">
+        <img src={pokemon?.sprites.other["official-artwork"].front_default} alt=""></img>
+      </div>
     </div>
   )
 }

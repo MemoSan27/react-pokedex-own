@@ -1,0 +1,11 @@
+.poke-info__container{
+    border: 1px solid black;
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-top: 7rem;
+    border-radius: 3rem;
+}
+.poke-info__img{
+    width: 40%;
+    margin: 0 auto;
+}
