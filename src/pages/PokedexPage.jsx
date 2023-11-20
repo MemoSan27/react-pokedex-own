@@ -15,20 +15,18 @@ const PokedexPage = () => {
   const trainerName = useSelector(store => store.trainerName)
 
   const url = 'https://pokeapi.co/api/v2/pokemon?limit=1292&offset=0'
-  const [ pokemons, getPokemons, getByTypePokemon ] = useFetch(url)
+  const [ pokemons, getPokemons, getByTypePokemon, filtered ] = useFetch(url)
 
-  useEffect(() => {
-    if(selectValue=== 'allPokemons'){
+useEffect(() => {
+    if(inputValue === ''){
     getPokemons()
     setPage(1);  
     }else{
-      setInputValue('');
-      getByTypePokemon(selectValue)
+      filtered(inputValue)
       setPage(1);
     }
       
-    
-  }, [selectValue])
+}, [inputValue])
   
   const inputSearch = useRef()
 
@@ -39,12 +37,14 @@ const PokedexPage = () => {
     setPage(1);
     inputSearch.current.value = ''
   }
+  
+  console.log(pokemons);
 
-  const cbfilter = (poke) => {
+ /*  const cbfilter = (poke) => {
     //filtro por nombre en el input
     const nameFiltered = poke.name.includes(inputValue)
     return nameFiltered
-  }
+  } */
 
    //===== estados y variables de paginación=====
    const perPages = 12;
@@ -73,12 +73,12 @@ const PokedexPage = () => {
       </section>
 
       <section>
-        {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
+        {<Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
       </section>
 
       <article className="pokemons__container">
         {
-          pokemons?.results.filter(cbfilter).map(poke =>(
+          pokemons?.results.map(poke =>(
             <PokeCard
             key={poke.url}
             url={poke.url}
@@ -88,7 +88,7 @@ const PokedexPage = () => {
       </article>
 
       <section>
-        {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
+        {<Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
       </section>
     </main>
   )
