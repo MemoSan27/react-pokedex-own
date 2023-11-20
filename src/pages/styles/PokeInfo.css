@@ -219,6 +219,7 @@
     .graphics{
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 8rem;
     }
 }
 .progress{
