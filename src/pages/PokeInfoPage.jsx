@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import './styles/PokeInfo.css'
 import { getBackground, getColor } from "../helpers/helper";
 import Typewriter from 'typewriter-effect';
+import { CircularProgressbar } from "react-circular-progressbar";
+import 'react-circular-progressbar/dist/styles.css';
 
 const PokeInfoPage = () => {
 
@@ -89,6 +91,26 @@ const PokeInfoPage = () => {
                                   }}
                               />
           </h1>
+        </div>
+        <div className="graphics">
+          <div className="progress">
+            <CircularProgressbar />
+          </div>
+          <div className="progress">
+            <CircularProgressbar />
+          </div>
+          <div className="progress">
+            <CircularProgressbar />
+          </div>
+          <div className="progress">
+            <CircularProgressbar />
+          </div>
+          <div className="progress">
+            <CircularProgressbar />
+          </div>
+          <div className="progress">
+            <CircularProgressbar />
+          </div>
         </div>
       </article>
 

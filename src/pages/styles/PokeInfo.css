@@ -205,5 +205,28 @@
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
-    
+}
+.graphics{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+@media ( min-width: 768px ) { 
+    .graphics{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+.progress{
+    width: 30%;
+}
+@media ( min-width: 768px ) { 
+    .progress{
+        width: 18rem;
+        height: 18rem;
+    }
 }
