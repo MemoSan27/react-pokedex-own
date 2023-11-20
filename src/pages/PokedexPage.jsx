@@ -47,10 +47,7 @@ useEffect(() => {
    const quantyPages = Math.ceil(pokemons?.results?.length / perPages);
  
   return (
-   <>
-   { isLoading 
-     ? <Loading />
-      : <main>
+  <main>
         <section className="pokepage__container">
           <p className="pokepage__welcome">Welcome <span className="pokepage__trainer">"{ trainerName }"</span>, here select your favorite pokemon, let's go!</p>
           <form className="pokepage__form" onSubmit={handleSubmit}> 
@@ -71,11 +68,12 @@ useEffect(() => {
           </form>
         </section>
 
+    
         <section>
-          {pokemons?.results[0] 
-          ? <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/> 
-          : <Error> No pokemons found!! </Error> 
-          }
+        {pokemons?.results[0] 
+        ? <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/> 
+        : <Error> No pokemons found!! </Error> 
+        }
         </section>
 
         <article className="pokemons__container">
@@ -92,9 +90,9 @@ useEffect(() => {
         <section>
           {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
         </section>
-      </main>
-    }
-  </>
+
+  </main>
+  
   )
 }
 
