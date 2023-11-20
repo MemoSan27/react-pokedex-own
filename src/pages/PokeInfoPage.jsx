@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom"
 import useFetch from "../hooks/useFetch";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import './styles/PokeInfo.css'
 import { getBackground, getColor } from "../helpers/helper";
 import Typewriter from 'typewriter-effect';
-import { CircularProgressbar } from "react-circular-progressbar";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 
 const PokeInfoPage = () => {
@@ -13,8 +13,7 @@ const PokeInfoPage = () => {
 
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`
   const [ pokemon, getPokemon ] = useFetch(url);
-
-  
+  const [ porcentaje, setPorcentaje ] = useState(0);
 
   useEffect( () => {
     getPokemon()
@@ -94,22 +93,75 @@ const PokeInfoPage = () => {
         </div>
         <div className="graphics">
           <div className="progress">
-            <CircularProgressbar />
+            <h2 className="progress__name"> { pokemon?.stats?.[0].stat.name.toUpperCase() } </h2>
+            <CircularProgressbar
+              styles={buildStyles({
+                pathColor: 'rgb(100,100,100)',
+                trailColor: '#fff'
+              })} 
+              value={((pokemon?.stats?.[0].base_stat)/150) * 100}
+              text={`${pokemon?.stats?.[0].base_stat} / 150`}
+            />
           </div>
+
           <div className="progress">
-            <CircularProgressbar />
+            <h2 className="progress__name"> { pokemon?.stats?.[1].stat.name.toUpperCase() } </h2>
+            <CircularProgressbar
+              styles={buildStyles({
+                pathColor: 'rgb(100,100,100)',
+                trailColor: '#fff'
+              })} 
+              value={((pokemon?.stats?.[1].base_stat)/150) * 100}
+              text={`${pokemon?.stats?.[1].base_stat} / 150`}
+            />
           </div>
+
           <div className="progress">
-            <CircularProgressbar />
+            <h2 className="progress__name"> { pokemon?.stats?.[2].stat.name.toUpperCase() } </h2>
+            <CircularProgressbar
+              styles={buildStyles({
+                pathColor: 'rgb(100,100,100)',
+                trailColor: '#fff'
+              })} 
+              value={((pokemon?.stats?.[2].base_stat)/150) * 100}
+              text={`${pokemon?.stats?.[2].base_stat} / 150`}
+            />
           </div>
+
           <div className="progress">
-            <CircularProgressbar />
+            <h2 className="progress__name"> { pokemon?.stats?.[3].stat.name.toUpperCase() } </h2>
+            <CircularProgressbar
+              styles={buildStyles({
+                pathColor: 'rgb(100,100,100)',
+                trailColor: '#fff'
+              })} 
+              value={((pokemon?.stats?.[3].base_stat)/150) * 100}
+              text={`${pokemon?.stats?.[3].base_stat} / 150`}
+            />
           </div>
+
           <div className="progress">
-            <CircularProgressbar />
+            <h2 className="progress__name"> { pokemon?.stats?.[4].stat.name.toUpperCase() } </h2>
+            <CircularProgressbar
+              styles={buildStyles({
+                pathColor: 'rgb(100,100,100)',
+                trailColor: '#fff'
+              })} 
+              value={((pokemon?.stats?.[4].base_stat)/150) * 100}
+              text={`${pokemon?.stats?.[4].base_stat} / 150`}
+            />
           </div>
+
           <div className="progress">
-            <CircularProgressbar />
+            <h2 className="progress__name"> { pokemon?.stats?.[5].stat.name.toUpperCase() } </h2>
+            <CircularProgressbar
+              styles={buildStyles({
+                pathColor: 'rgb(100,100,100)',
+                trailColor: '#fff'
+              })} 
+              value={((pokemon?.stats?.[5].base_stat)/150) * 100}
+              text={`${pokemon?.stats?.[5].base_stat} / 150`}
+            />
           </div>
         </div>
       </article>

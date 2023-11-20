@@ -211,23 +211,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 1.5rem;
     max-width: 75rem;
     margin: 0 auto;
+    
 }
 @media ( min-width: 768px ) { 
     .graphics{
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 8rem;
+        gap: 3.5rem;
     }
 }
 .progress{
     width: 30%;
 }
-@media ( min-width: 768px ) { 
-    .progress{
-        width: 18rem;
-        height: 18rem;
-    }
+.CircularProgressbar .CircularProgressbar-text{
+    font-size: 1.6rem !important;
+    fill: rgb(100,100,100) !important;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+}
+.progress__name{
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(100,100,100);
+    font-weight: 900;
+    height: 7.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
