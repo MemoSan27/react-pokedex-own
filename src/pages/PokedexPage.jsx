@@ -69,7 +69,7 @@ useEffect(() => {
       </section>
 
       <section>
-        {<Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
+        {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
       </section>
 
       <article className="pokemons__container">
@@ -84,7 +84,7 @@ useEffect(() => {
       </article>
 
       <section>
-        {<Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
+        {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
       </section>
     </main>
   )
