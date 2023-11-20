@@ -1,0 +1,99 @@
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.home{
+    min-width: 100vw;
+    min-height: 100vh;
+    background: radial-gradient(yellow, grey);
+}
+.home__logo{
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+    width: 65%;
+    animation: gira 6s infinite;
+    transition: filter 2s;
+}
+@media ( min-width: 1200px ) { 
+    .home__logo{
+        width: 45%;
+    }
+}
+@keyframes gira {
+    0%{
+        transform: rotateY(0);
+    }
+    50%{
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(360deg)
+    }
+}
+.home__logo:hover{
+    filter: sepia();
+}
+.pokeball{
+    max-width: 25.5rem;
+    max-height: 40rem;
+}
+.imgScreen{
+    position: relative;
+    height: 10rem;
+    z-index: 3;
+}
+.pokesup{
+    position: relative;
+    top: 2rem;
+}
+.pokeinf{
+    position: relative;
+    top: -3rem;
+}
+.form{
+    width: 23rem;
+    left: 1.2rem;
+    position: relative;
+    top: -22.7rem;
+    z-index: 5;
+}
+.input{
+    width: 89%;
+    height: 6rem;
+    background-color: transparent;
+    color: yellow;
+    font-size: 3rem;
+    font-family: 'Orbitron', sans-serif;
+}
+.btnGo{
+    border: none;
+    width: 5rem;
+    position: relative;
+    top: -6rem;
+    left: 14.6rem;
+    height: 6rem;
+    background-color: transparent;
+    color: red;
+}
+.go{
+    font-size: 5.6rem !important;
+}
+.swal2-popup .swal2-title{
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 1.5rem !important;
+    color: white !important;
+}
+.swal2-popup {
+    padding: 2rem 0 !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border: 3px solid white;
+    box-shadow: 1.1rem 1rem 7.9rem 0rem rgba(0,0,0,0.75);
+    filter: blur(0.3px);
+}
+.swal2-popup .swal2-styled{
+    background-color: black !important;
+}

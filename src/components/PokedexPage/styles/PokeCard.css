@@ -1,0 +1,119 @@
+.card{
+    border: 3px solid grey;
+    max-width: 30rem;
+    width: 90%;
+    height: 40rem;
+    overflow: hidden;
+    border-radius: 3rem;
+    transition: transform 500ms;
+}
+.card:hover{
+    box-shadow: -5px -5px 23px 5px rgba(0,0,0,0.3);
+}
+.card__img{
+    animation: pokemon 2s 1 linear;
+    position: relative;
+    transition: transform 700ms ease-in-out;
+}
+.card__img:hover{
+    transform: scale(1.5);
+}
+@keyframes pokemon {
+    0% {
+        scale: .3
+    }
+
+    50% {
+        scale: .7
+    }
+
+    to {
+        scale: 1;
+    }
+}
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.header{
+    /* background-image: url('../../../assets/img/fondoencabezado.svg');
+    background-size: cover; */
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info{
+    position: relative;
+    top: 20%;
+    height: 40%;
+}
+.circ{
+    border-radius: 50%;
+    width: 40%;
+    height: 100%;
+    border: 4px solid yellow;
+    position: relative;
+    top: 25%;
+    box-shadow: -5px -5px 23px 5px rgba(128,128,12,0.75);
+}
+.card__footer{
+    height: 33%;
+    
+    
+}
+.card__poke-name{
+    margin-top: 1rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    animation: pokemon 2s 1 linear;
+}
+.type__box{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: transform 700ms;
+}
+.type__box:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.type__name{
+    font-size: 2rem;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    animation: pokemon 2s 1 linear;
+}
+.type__ul{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.card__span{
+    display: block;
+}
+.card__stats{
+    display: flex;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 24rem;
+    margin: 0 auto;
+    margin-top: 1.9rem;
+}
+.span__name{
+    font-family: 'Lato', sans-serif;    
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 900;
+    
+}
+.span__stat{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+}

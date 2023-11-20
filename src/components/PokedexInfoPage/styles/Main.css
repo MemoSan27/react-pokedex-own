@@ -1,0 +1,229 @@
+.poke-info__container{
+    border: none;
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-top: 7rem;
+    border-radius: 3rem;
+    padding: 5rem 0;
+    position: relative;
+}
+.poke-info__img{
+    width: 50%;
+    margin: 0 auto;
+    
+}
+@media ( min-width: 768px ) { 
+    .poke-info__img{
+        width: 50%;
+    }
+}
+.poke-info__pic{
+    animation: pokemon 2s 1 linear;
+    margin: 0 0 0 30%;
+}
+@media ( min-width: 768px ) { 
+    .poke-info__pic{
+        margin: 0 0 0 15%;
+    }
+}
+@keyframes pokemon {
+    0% {
+        scale: .3
+    }
+
+    50% {
+        scale: .7
+    }
+
+    to {
+        scale: 1;
+    }
+}
+.poke-info__name{
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+@media ( min-width: 768px ) { 
+    .poke-info__name{
+        font-size: 7rem;
+    }
+}
+@media ( min-width: 1200px ) { 
+    .poke-info__name{
+        font-size: 10rem;
+    }
+}
+.poke-info__height{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    text-align: center;
+    width: 8rem;
+    padding: .5rem;
+    background-color: #ffffff6c;
+    border-radius: 0 10px 10px 0;
+    perspective: 900px;
+    perspective-origin: center
+}
+@media ( min-width: 768px ) { 
+    .poke-info__height{
+        width: 10rem;
+    }
+}
+@media ( min-width: 1200px ) { 
+    .poke-info__height{
+        width: 15rem;
+    }
+}
+.avatar{
+    filter: grayscale();
+    max-width: 80%;
+    margin: 1rem;
+    animation: avatar 6s infinite linear;
+    position: relative;
+    z-index: 102;
+}
+@keyframes avatar {
+    0% {
+        transform: rotateY(0)
+    }
+
+    50% {
+        transform: rotateY(180deg)
+    }
+
+    to {
+        transform: rotateY(360deg)
+    }
+}
+.poke-info__desc{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+@media ( min-width: 768px ) { 
+    .poke-info__desc{
+        font-size: 2rem;
+    }
+}
+@media ( min-width: 1200px ) { 
+    .poke-info__height{
+       font-size: 2.5rem;
+    }
+}
+.poke-info__info{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+@media ( min-width: 768px ) { 
+    .poke-info__info{
+        font-size: 2rem;
+    }
+}
+@media ( min-width: 1200px ) { 
+    .poke-info__info{
+       font-size: 2.5rem;
+    }
+}
+.cajas{
+    margin: 0 0 0 35%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+@media ( min-width: 800px ) { 
+.cajas{
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 0 0 20%;
+}
+}
+.type__container{
+    background-color: white;
+    padding: 1rem;
+    width: 150%;
+    border-radius: 1rem;
+    text-align: center;
+}
+.two{
+    position: relative;
+    left: -100%;
+    width: 250%;
+}
+@media ( min-width: 800px ) { 
+    .two{
+        position: static;
+    }
+}
+.type__legend,
+.type__descript{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    color: white;
+}
+.type__legend{
+    background-color: yellow;
+    padding: 1rem 0;
+    font-weight: 900;
+    color: grey;
+}
+.type__descript{
+    width: 50%;
+    padding: 1rem 1rem;
+    font-weight: 900;
+    
+}
+.type__container-inside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+@media ( min-width: 850px ) { 
+    .type__container-inside{
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+.type__box{
+    background-color: grey;
+}
+.type__name{
+    color: white;
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.back{
+    font-size: 7rem;
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    transition: color 300ms;
+}
+.back:hover{
+    cursor: pointer;
+    color: 	rgb(105,105,105)
+}
+@media ( min-width: 768px ) { 
+    .back{
+        font-size: 10rem;
+    }
+}
+@media ( min-width: 1200px ) { 
+    .back{
+        font-size: 13rem;
+    }
+}

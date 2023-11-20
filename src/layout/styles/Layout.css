@@ -1,0 +1,145 @@
+.yellowbar{
+    min-width: 100vw;
+    height: 10rem;
+    background-color: yellow;
+}
+@media ( min-width: 678px ) { 
+    .yellowbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.blackbar{
+    background-color: black;
+    min-width: 100vw;
+    height: 4rem;
+}
+.footer{
+    background-color: black;
+    min-width: 100vw;
+    height: 9rem;
+    position: relative;
+}
+@media ( min-width: 500px ) { 
+    .footer{
+        height: 6rem;
+    }   
+}
+.outlet{
+    min-height: calc(100vh - 180px);
+    padding: 4rem 5rem 10rem 5rem;
+}
+.white__circle{
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,rgb(223,226,208),rgb(8,8,8));
+    border-radius: 50%;
+    border: 1rem solid black;
+    position: absolute;
+    top: 5rem;
+    right: 3rem;
+    z-index: 2;
+    
+}
+.white__circle2{
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,rgb(223,226,208),rgb(8,8,8));
+    border-radius: 50%;
+    border: 1rem solid black;
+    position: absolute;
+    top: -8rem;
+    left: 3rem;
+    z-index: 2;
+}
+.gray__circle{
+    width: 7rem;
+    height: 7rem;
+    background-color: #fc0505;
+    border-radius: 50%;
+    border: 1rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(at center,rgb(121,3,3),red)
+}
+.pikachu{
+    width: 100%;
+    position: relative;
+    top: 0.4rem;
+    left: 0;
+    animation: pokemon 2s 1 linear;
+    z-index: 100;
+    transition: transform 1s;
+}
+.pikachu:hover{
+    transform: scale(2);
+}
+@keyframes pokemon {
+    0% {
+        scale: .3
+    }
+
+    50% {
+        scale: .7
+    }
+
+    to {
+        scale: 1
+    }
+}
+.pokelogo{
+    width: 20.28rem;
+    height: 3.63rem;
+    position: relative;
+    top: 6.3rem;
+    margin-left: 5rem;
+    animation: gira 6s infinite;
+    transition: filter 2s;
+}
+@media ( min-width: 678px ) { 
+    .pokelogo{
+        animation: none;
+        animation: gira2 6s infinite;
+        position: static;
+        margin-left: 0;
+        
+    }
+}
+@media ( max-width: 340px ) { 
+    .pokelogo{
+        display: none;
+    }
+}
+@keyframes gira {
+    0%{
+        transform: rotateY(0) scale(1.3);
+    }
+    50%{
+        transform: rotateY(180deg) scale(1.3);
+    }
+    100%{
+        transform: rotateY(360deg) scale(1.3);
+    }
+}
+@keyframes gira2 {
+    0%{
+        transform: rotateY(0) scale(1.7);
+    }
+    50%{
+        transform: rotateY(180deg) scale(1.7);
+    }
+    100%{
+        transform: rotateY(360deg) scale(1.7);
+    }
+}
+.pokelogo:hover{
+    filter: sepia();
+}
