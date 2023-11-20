@@ -24,8 +24,8 @@ useEffect(() => {
     }else if(inputValue !== '' && selectValue === 'allPokemons'){
       filtered(inputValue)
       setPage(1);
-      
     }else{
+      setInputValue('');
       getByTypePokemon(selectValue);
       setPage(1);
       
@@ -42,16 +42,7 @@ useEffect(() => {
     setPage(1);
     inputSearch.current.value = ''
   }
-  
-  console.log(pokemons);
-
- /*  const cbfilter = (poke) => {
-    //filtro por nombre en el input
-    const nameFiltered = poke.name.includes(inputValue)
-    return nameFiltered
-  } */
-
-   //===== estados y variables de paginación=====
+ //===== estados y variables de paginación=====
    const perPages = 12;
    const quantyPages = Math.ceil(pokemons?.results?.length / perPages);
  
