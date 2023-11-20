@@ -123,8 +123,8 @@ const PokeInfoPage = () => {
                 pathColor: 'rgb(100,100,100)',
                 trailColor: '#fff'
               })} 
-              value={((pokemon?.stats?.[2].base_stat)/150) * 100}
-              text={`${pokemon?.stats?.[2].base_stat} / 150`}
+              value={((pokemon?.stats?.[2].base_stat)/250) * 100}
+              text={`${pokemon?.stats?.[2].base_stat} / 250`}
             />
           </div>
 
@@ -135,8 +135,8 @@ const PokeInfoPage = () => {
                 pathColor: 'rgb(100,100,100)',
                 trailColor: '#fff'
               })} 
-              value={((pokemon?.stats?.[3].base_stat)/150) * 100}
-              text={`${pokemon?.stats?.[3].base_stat} / 150`}
+              value={((pokemon?.stats?.[3].base_stat)/200) * 100}
+              text={`${pokemon?.stats?.[3].base_stat} / 200`}
             />
           </div>
 
@@ -147,8 +147,8 @@ const PokeInfoPage = () => {
                 pathColor: 'rgb(100,100,100)',
                 trailColor: '#fff'
               })} 
-              value={((pokemon?.stats?.[4].base_stat)/150) * 100}
-              text={`${pokemon?.stats?.[4].base_stat} / 150`}
+              value={((pokemon?.stats?.[4].base_stat)/200) * 100}
+              text={`${pokemon?.stats?.[4].base_stat} / 200`}
             />
           </div>
 
