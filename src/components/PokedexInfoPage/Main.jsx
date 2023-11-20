@@ -1,5 +1,6 @@
 import { getBackground, getColor } from "../../helpers/helper";
 import Typewriter from 'typewriter-effect';
+import './styles/Main.css'
 
 const Main = ({ pokemon }) => {
 

@@ -2,6 +2,7 @@ import { getBackground, getColor } from "../../helpers/helper";
 import Typewriter from 'typewriter-effect';
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
+import './styles/StatSection.css'
 
 
 const StatsSection = ({ pokemon }) => {
