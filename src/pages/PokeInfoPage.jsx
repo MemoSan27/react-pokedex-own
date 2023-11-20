@@ -4,20 +4,25 @@ import { useEffect } from "react";
 import Main from "../components/PokedexInfoPage/Main";
 import StatsSection from "../components/PokedexInfoPage/StatsSection";
 import MovementsSection from "../components/PokedexInfoPage/MovementsSection";
+import Loading from "../components/Loading";
 
 const PokeInfoPage = () => {
 
   const { id } = useParams();
 
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`
-  const [ pokemon, getPokemon ] = useFetch(url);
+  const [ pokemon, getPokemon, , , isLoading ] = useFetch(url);
   
   useEffect( () => {
     getPokemon()
   },[])
 
   return (
-    <section className="pokeinfo">
+    <>
+    {
+      isLoading
+      ? <Loading />
+      : <section className="pokeinfo">
       
       <Main 
         pokemon={pokemon}
@@ -31,7 +36,9 @@ const PokeInfoPage = () => {
         pokemon={pokemon}
       />
 
-    </section>
+      </section>
+    }
+    </>
   )
 }
 
