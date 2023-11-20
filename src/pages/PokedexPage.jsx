@@ -18,15 +18,20 @@ const PokedexPage = () => {
   const [ pokemons, getPokemons, getByTypePokemon, filtered ] = useFetch(url)
 
 useEffect(() => {
-    if(inputValue === ''){
+    if(inputValue === '' && selectValue === 'allPokemons'){
     getPokemons()
     setPage(1);  
-    }else{
+    }else if(inputValue !== '' && selectValue === 'allPokemons'){
       filtered(inputValue)
       setPage(1);
-    }
       
-}, [inputValue])
+    }else{
+      getByTypePokemon(selectValue);
+      setPage(1);
+      
+    }
+    
+}, [inputValue, selectValue])
   
   const inputSearch = useRef()
 
