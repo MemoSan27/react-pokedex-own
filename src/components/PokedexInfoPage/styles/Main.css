@@ -206,3 +206,22 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.back{
+    font-size: 7rem;
+    position: absolute;
+    top: 20%;
+    left: 8%;
+}
+.back:hover{
+    cursor: pointer;
+}
+@media ( min-width: 768px ) { 
+    .back{
+        font-size: 10rem;
+    }
+}
+@media ( min-width: 1200px ) { 
+    .back{
+        font-size: 13rem;
+    }
+}

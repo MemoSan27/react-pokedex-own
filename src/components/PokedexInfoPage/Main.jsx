@@ -1,8 +1,16 @@
 import { getBackground, getColor } from "../../helpers/helper";
 import Typewriter from 'typewriter-effect';
 import './styles/Main.css'
+import { useNavigate } from "react-router-dom";
 
 const Main = ({ pokemon }) => {
+
+   const navigate = useNavigate();
+
+   const handleBack = () => {
+    window.scrollTo(0,0);
+    navigate(-1);
+   }
 
     const getImage = () => {
         if (pokemon?.sprites?.other.dream_world.front_default) {
@@ -15,6 +23,7 @@ const Main = ({ pokemon }) => {
   return (
     <main style={{ backgroundColor: getBackground(0, pokemon)}} className="poke-info__container">
         <div className="poke-info__img">
+          <i onClick={handleBack} className='back bx bx-chevrons-left bx-flip-vertical'></i>
           <h1 style={{ color: getColor(0, pokemon) }} className="poke-info__name"> 
             <Typewriter
                                   options={{

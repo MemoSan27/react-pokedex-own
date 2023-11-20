@@ -16,8 +16,8 @@ const PokeCard = ({ url }) => {
   const navigate = useNavigate()
 
   const handleNavigate = () => {
-    window.scrollTo(0,0)
-    navigate(`/pokedex/${infoPoke.id}`)
+    window.scrollTo(0,0);
+    navigate(`/pokedex/${infoPoke.id}`);
   }
 
   
