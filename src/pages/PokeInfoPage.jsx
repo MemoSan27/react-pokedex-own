@@ -27,7 +27,7 @@ const PokeInfoPage = () => {
 }
 
   return (
-    <div style={{ backgroundColor: getBackground(0, pokemon) }} className="poke-info__container">
+    <div style={{ backgroundColor: getBackground(0, pokemon)}} className="poke-info__container">
       <div className="poke-info__img">
         <h1 style={{ color: getColor(0, pokemon) }} className="poke-info__name"> 
           <Typewriter
@@ -47,6 +47,32 @@ const PokeInfoPage = () => {
           <p style={{ color: getColor(0, pokemon) }} className="poke-info__info"> {pokemon?.weight} pounds </p>                      
         </div>
         <img className="poke-info__pic" src={pokemon?.sprites.other["official-artwork"].front_default} alt=""></img>
+        <div className="cajas">
+          <div className="type__container">
+            <p className="type__legend"> Type </p>
+            <div className="type__container-inside">
+            {
+            pokemon?.types.map((infoType, index) => (
+              <div key={infoType.type.name} style={{ backgroundColor: getBackground(index, pokemon) }} className="type__box">
+                <p  style={{ color: getColor(index, pokemon) }} className="type__name">{infoType.type.name.toUpperCase()}</p>
+              </div>
+              ))
+            }
+            </div>
+          </div>
+          <div className="type__container two">
+            <p className="type__legend"> Habilities </p>
+            <div className="type__container-inside">
+            {
+            pokemon?.abilities?.map((infoType) => (
+              <div  className="type__box">
+                <p key={infoType.ability.name} className="type__name">{infoType.ability.name.toUpperCase()}</p>
+              </div>
+              ))
+            }
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

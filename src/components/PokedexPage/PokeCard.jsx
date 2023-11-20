@@ -58,7 +58,6 @@ const PokeCard = ({ url }) => {
             <li key={infoStat.stat.url}>
               <span style={{ color: getColor(0, infoPoke) }} className="card__span span__name">{infoStat.stat.name}</span>
               <span style={{ color: getColor(0, infoPoke) }} className="card__span span__stat">{infoStat.base_stat}</span>
-              { console.log(infoStat) }
             </li>
           ))
         }
