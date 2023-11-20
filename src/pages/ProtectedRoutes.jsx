@@ -8,6 +8,7 @@ const ProtectedRoutes = () => {
     const trainerName = useSelector(store => store.trainerName)
   
     if(trainerName.length > 2) {
+        window.scrollTo(0,0);
         return <Layout />
     } else {
         Swal.fire({
@@ -15,6 +16,7 @@ const ProtectedRoutes = () => {
            title: "Please type at least 3 characters in your name",
            timer: 1500
         });
+        window.scrollTo(0,0);
         return (
         <Navigate to='/'/>
         )

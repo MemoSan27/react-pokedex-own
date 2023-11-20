@@ -211,9 +211,11 @@
     position: absolute;
     top: 20%;
     left: 8%;
+    transition: color 300ms;
 }
 .back:hover{
     cursor: pointer;
+    color: 	rgb(105,105,105)
 }
 @media ( min-width: 768px ) { 
     .back{

@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom"
 import useFetch from "../hooks/useFetch";
 import { useEffect } from "react";
-import './styles/PokeInfo.css'
 import Main from "../components/PokedexInfoPage/Main";
 import StatsSection from "../components/PokedexInfoPage/StatsSection";
 import MovementsSection from "../components/PokedexInfoPage/MovementsSection";

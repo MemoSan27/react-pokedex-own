@@ -51,8 +51,8 @@ const PokedexPage = () => {
    const quantyPages = Math.ceil(pokemons?.results?.length / perPages);
  
   return (
-    <div>
-      <div className="pokepage__container">
+    <main>
+      <section className="pokepage__container">
         <p className="pokepage__welcome">Welcome <span className="pokepage__trainer">"{ trainerName }"</span>, here select your favorite pokemon, let's go!</p>
         <form className="pokepage__form" onSubmit={handleSubmit}> 
           <div className="input__container">
@@ -70,9 +70,13 @@ const PokedexPage = () => {
               setSelectValue={setSelectValue} />
           </div>
         </form>
-      </div>
-      {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
-      <div className="pokemons__container">
+      </section>
+
+      <section>
+        {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
+      </section>
+
+      <article className="pokemons__container">
         {
           pokemons?.results.filter(cbfilter).map(poke =>(
             <PokeCard
@@ -81,9 +85,12 @@ const PokedexPage = () => {
             />
           )).slice((page - 1)* perPages, (page - 1)* perPages + perPages)
         }
-      </div>
-      {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
-    </div>
+      </article>
+
+      <section>
+        {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
+      </section>
+    </main>
   )
 }
 
