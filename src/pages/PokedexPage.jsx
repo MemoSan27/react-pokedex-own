@@ -4,23 +4,27 @@ import { useEffect, useRef, useState } from "react"
 import PokeCard from "../components/PokedexPage/PokeCard"
 import SelectType from "../components/PokedexPage/SelectType"
 import './styles/PokedexPage.css'
+import Pagination from "../components/PokedexPage/Pagination"
 
 const PokedexPage = () => {
 
   const [inputValue, setInputValue] = useState('')
   const [selectValue, setSelectValue] = useState('allPokemons')
+  const [page, setPage] = useState(1)
 
   const trainerName = useSelector(store => store.trainerName)
 
-  const url = 'https://pokeapi.co/api/v2/pokemon?limit=10&offset=0'
+  const url = 'https://pokeapi.co/api/v2/pokemon?limit=1292&offset=0'
   const [ pokemons, getPokemons, getByTypePokemon ] = useFetch(url)
 
   useEffect(() => {
     if(selectValue=== 'allPokemons'){
-    getPokemons()  
+    getPokemons()
+    setPage(1);  
     }else{
       setInputValue('');
       getByTypePokemon(selectValue)
+      setPage(1);
     }
       
     
@@ -32,6 +36,7 @@ const PokedexPage = () => {
     e.preventDefault()
     setSelectValue('allPokemons');
     setInputValue(inputSearch.current.value.toLowerCase().trim())
+    setPage(1);
     inputSearch.current.value = ''
   }
 
@@ -40,6 +45,10 @@ const PokedexPage = () => {
     const nameFiltered = poke.name.includes(inputValue)
     return nameFiltered
   }
+
+   //===== estados y variables de paginación=====
+   const perPages = 12;
+   const quantyPages = Math.ceil(pokemons?.results?.length / perPages);
  
   return (
     <div>
@@ -62,6 +71,7 @@ const PokedexPage = () => {
           </div>
         </form>
       </div>
+      {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
       <div className="pokemons__container">
         {
           pokemons?.results.filter(cbfilter).map(poke =>(
@@ -69,9 +79,10 @@ const PokedexPage = () => {
             key={poke.url}
             url={poke.url}
             />
-          ))
+          )).slice((page - 1)* perPages, (page - 1)* perPages + perPages)
         }
       </div>
+      {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
     </div>
   )
 }
