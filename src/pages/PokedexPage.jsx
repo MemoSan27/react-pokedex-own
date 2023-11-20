@@ -5,6 +5,7 @@ import PokeCard from "../components/PokedexPage/PokeCard"
 import SelectType from "../components/PokedexPage/SelectType"
 import './styles/PokedexPage.css'
 import Pagination from "../components/PokedexPage/Pagination"
+import Error from "../components/Error"
 
 const PokedexPage = () => {
 
@@ -69,7 +70,10 @@ useEffect(() => {
       </section>
 
       <section>
-        {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
+        {pokemons?.results[0] 
+        ? <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/> 
+        : <Error> No pokemons found!! </Error> 
+        }
       </section>
 
       <article className="pokemons__container">
