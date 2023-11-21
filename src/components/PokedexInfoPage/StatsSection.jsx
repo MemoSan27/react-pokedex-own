@@ -22,23 +22,26 @@ const StatsSection = ({ pokemon }) => {
         </div>
         <div className="graphics">
           <div className="progress">
-            <h2 className="progress__name"> { pokemon?.stats?.[0].stat.name.toUpperCase() } </h2>
+            <h2 className="progress__name" style={{ color: getColor(0, pokemon)}}> { pokemon?.stats?.[0].stat.name.toUpperCase() } </h2>
             <CircularProgressbar
               styles={buildStyles({
                 pathColor: 'rgb(100,100,100)',
-                trailColor: '#fff'
+                trailColor: '#fff',
+                textColor: getColor(0, pokemon)
               })} 
               value={((pokemon?.stats?.[0].base_stat)/150) * 100}
               text={`${pokemon?.stats?.[0].base_stat} / 150`}
+              
             />
           </div>
 
           <div className="progress">
-            <h2 className="progress__name"> { pokemon?.stats?.[1].stat.name.toUpperCase() } </h2>
+            <h2 className="progress__name" style={{ color: getColor(0, pokemon)}}> { pokemon?.stats?.[1].stat.name.toUpperCase() } </h2>
             <CircularProgressbar
               styles={buildStyles({
                 pathColor: 'rgb(100,100,100)',
-                trailColor: '#fff'
+                trailColor: '#fff',
+                textColor: getColor(0, pokemon)
               })} 
               value={((pokemon?.stats?.[1].base_stat)/150) * 100}
               text={`${pokemon?.stats?.[1].base_stat} / 150`}
@@ -46,11 +49,12 @@ const StatsSection = ({ pokemon }) => {
           </div>
 
           <div className="progress">
-            <h2 className="progress__name"> { pokemon?.stats?.[2].stat.name.toUpperCase() } </h2>
+            <h2 className="progress__name" style={{ color: getColor(0, pokemon)}}> { pokemon?.stats?.[2].stat.name.toUpperCase() } </h2>
             <CircularProgressbar
               styles={buildStyles({
                 pathColor: 'rgb(100,100,100)',
-                trailColor: '#fff'
+                trailColor: '#fff',
+                textColor: getColor(0, pokemon)
               })} 
               value={((pokemon?.stats?.[2].base_stat)/250) * 100}
               text={`${pokemon?.stats?.[2].base_stat} / 250`}
@@ -58,11 +62,12 @@ const StatsSection = ({ pokemon }) => {
           </div>
 
           <div className="progress">
-            <h2 className="progress__name"> { pokemon?.stats?.[3].stat.name.toUpperCase() } </h2>
+            <h2 className="progress__name" style={{ color: getColor(0, pokemon)}}> { pokemon?.stats?.[3].stat.name.toUpperCase() } </h2>
             <CircularProgressbar
               styles={buildStyles({
                 pathColor: 'rgb(100,100,100)',
-                trailColor: '#fff'
+                trailColor: '#fff',
+                textColor: getColor(0, pokemon)
               })} 
               value={((pokemon?.stats?.[3].base_stat)/200) * 100}
               text={`${pokemon?.stats?.[3].base_stat} / 200`}
@@ -70,11 +75,12 @@ const StatsSection = ({ pokemon }) => {
           </div>
 
           <div className="progress">
-            <h2 className="progress__name"> { pokemon?.stats?.[4].stat.name.toUpperCase() } </h2>
+            <h2 className="progress__name" style={{ color: getColor(0, pokemon)}}> { pokemon?.stats?.[4].stat.name.toUpperCase() } </h2>
             <CircularProgressbar
               styles={buildStyles({
                 pathColor: 'rgb(100,100,100)',
-                trailColor: '#fff'
+                trailColor: '#fff',
+                textColor: getColor(0, pokemon)
               })} 
               value={((pokemon?.stats?.[4].base_stat)/200) * 100}
               text={`${pokemon?.stats?.[4].base_stat} / 200`}
@@ -82,11 +88,12 @@ const StatsSection = ({ pokemon }) => {
           </div>
 
           <div className="progress">
-            <h2 className="progress__name"> { pokemon?.stats?.[5].stat.name.toUpperCase() } </h2>
+            <h2 className="progress__name" style={{ color: getColor(0, pokemon)}}> { pokemon?.stats?.[5].stat.name.toUpperCase() } </h2>
             <CircularProgressbar
               styles={buildStyles({
                 pathColor: 'rgb(100,100,100)',
-                trailColor: '#fff'
+                trailColor: '#fff',
+                textColor: getColor(0, pokemon)
               })} 
               value={((pokemon?.stats?.[5].base_stat)/150) * 100}
               text={`${pokemon?.stats?.[5].base_stat} / 150`}

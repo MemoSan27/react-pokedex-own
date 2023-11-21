@@ -20,7 +20,6 @@
 }
 .CircularProgressbar .CircularProgressbar-text{
     font-size: 1.3rem !important;
-    fill: rgb(100,100,100) !important;
     font-family: var(--mainFont);
     font-weight: 900;
 }
@@ -28,7 +27,6 @@
     font-family: var(--mainFont);
     text-align: center;
     font-size: 3rem;
-    color: rgb(100,100,100);
     font-weight: 900;
     height: 7.6rem;
     display: flex;
