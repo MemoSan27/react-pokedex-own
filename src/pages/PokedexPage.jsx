@@ -12,7 +12,7 @@ const PokedexPage = () => {
 
   const [inputValue, setInputValue] = useState('')
   const [selectValue, setSelectValue] = useState('allPokemons')
-  const [selectValue2, setSelectValue2] = useState('12')
+  const [selectValue2, setSelectValue2] = useState(12)
   const [page, setPage] = useState(1)
 
   const trainerName = useSelector(store => store.trainerName)
@@ -44,7 +44,7 @@ useEffect(() => {
     inputSearch.current.value = ''
   }
  //===== estados y variables de paginación=====
-   const perPages = selectValue2;
+   const perPages = Number(selectValue2);
    const quantyPages = Math.ceil(pokemons?.results?.length / perPages);
 
    const selectElement = useRef();
@@ -60,11 +60,11 @@ useEffect(() => {
           <div className="pokepager__ppcontainer">
           <p className="pokepage__perpage"> Pokemons per page?</p>
           <select ref={selectElement} className="pokepage__ppselect" onChange={handleChange}>
-            <option value="12">Auto</option>
-            <option value="8">8</option>
-            <option value="16">16</option>
-            <option value="24">24</option>
-            <option value="30">32</option>
+            <option value={12}>Auto</option>
+            <option value={8}>8</option>
+            <option value={16}>16</option>
+            <option value={24}>24</option>
+            <option value={32}>32</option>
           </select>
           </div>
           <p className="pokepage__welcome">Welcome <span className="pokepage__trainer">"{ trainerName }"</span>, here select your favorite pokemon, let's go!</p>
