@@ -18,6 +18,7 @@ const DarkMode = () => {
         document.querySelector('.page').setAttribute('data-theme', 'dark')
         document.querySelector('.bx').setAttribute('data-theme', 'dark')
         document.querySelector('.pokepage__welcome').setAttribute('data-theme', 'dark')
+        document.querySelector('.pokepage__perpage').setAttribute('data-theme', 'dark')
     }
 
     const setLightMode = () => {
@@ -33,6 +34,7 @@ const DarkMode = () => {
         document.querySelector('.page').setAttribute('data-theme', 'light')
         document.querySelector('.bx').setAttribute('data-theme', 'light')
         document.querySelector('.pokepage__welcome').setAttribute('data-theme', 'light')
+        document.querySelector('.pokepage__perpage').setAttribute('data-theme', 'light')
     }
 
     const toggleTheme = (e) => {
