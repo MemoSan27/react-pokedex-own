@@ -3,6 +3,11 @@
     left: 5%;
     top: 75px;
 }
+@media ( min-width: 500px ) { 
+    .dark_mode{
+        top: 98px;
+    }
+}
 @media ( min-width: 768px ) { 
     .dark_mode{
         top: 18rem;
