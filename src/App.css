@@ -3,11 +3,30 @@
   --secondaryFont: 'Lato', sans-serif;
   --pokemon: pokemon 2s 1 linear;
   --avatar: avatar 6s infinite linear;
+  --bgyellowbar: yellow;
+  --bgoutlet: white;
+  --bordercolor: grey;
+  --bgInputs: white;
+  --fontmc: black;
+  --spancolor: red;
+  --pagecolor: black;
+  --perpage: #7e4400;
+}
+[data-theme="dark"]{
+  --bgyellowbar: grey;
+  --bgoutlet: grey;
+  --bordercolor: black;
+  --bgInputs: grey;
+  --fontmc: lightblue;
+  --spancolor: lightblue;
+  --pagecolor: white;
+  --perpage: white;
 }
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 300ms ease-in-out;
 }
 body{
   overflow-x: hidden;

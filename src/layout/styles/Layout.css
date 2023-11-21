@@ -1,7 +1,7 @@
 .yellowbar{
     min-width: 100vw;
     height: 10rem;
-    background-color: yellow;
+    background-color: var(--bgyellowbar);
 }
 @media ( min-width: 678px ) { 
     .yellowbar{
@@ -29,6 +29,7 @@
 .outlet{
     min-height: calc(100vh - 180px);
     padding: 4rem 5rem 10rem 5rem;
+    background-color: var(--bgoutlet);
 }
 .white__circle{
     width: 12rem;

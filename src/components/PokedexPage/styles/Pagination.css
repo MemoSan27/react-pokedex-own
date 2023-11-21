@@ -22,6 +22,10 @@
     top: -3rem;
     margin-left: -1.4rem;
     margin-right: -1.4rem;
+    color: var(--pagecolor);
+}
+.bx{
+    color: var(--pagecolor);
 }
 @media ( max-width: 349px ) { 
     .page{
