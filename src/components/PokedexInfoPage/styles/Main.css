@@ -18,7 +18,7 @@
     }
 }
 .poke-info__pic{
-    animation: pokemon 2s 1 linear;
+    animation: var(--pokemon);
     margin: 0 0 0 30%;
 }
 @media ( min-width: 768px ) { 
@@ -26,24 +26,11 @@
         margin: 0 0 0 15%;
     }
 }
-@keyframes pokemon {
-    0% {
-        scale: .3
-    }
-
-    50% {
-        scale: .7
-    }
-
-    to {
-        scale: 1;
-    }
-}
 .poke-info__name{
     font-size: 4rem;
     text-align: center;
     margin: 0 auto;
-    font-family: 'Orbitron', sans-serif;
+    font-family: var(--mainFont);
     display: flex;
     justify-content: center;
     margin-bottom: 3rem;
@@ -84,22 +71,9 @@
     filter: grayscale();
     max-width: 80%;
     margin: 1rem;
-    animation: avatar 6s infinite linear;
+    animation: var(--avatar);
     position: relative;
     z-index: 102;
-}
-@keyframes avatar {
-    0% {
-        transform: rotateY(0)
-    }
-
-    50% {
-        transform: rotateY(180deg)
-    }
-
-    to {
-        transform: rotateY(360deg)
-    }
 }
 .poke-info__desc{
     font-family: 'Lato', sans-serif;
@@ -117,7 +91,7 @@
     }
 }
 .poke-info__info{
-    font-family: 'Orbitron', sans-serif;
+    font-family: var(--mainFont);
     font-size: 1.2rem;
     font-weight: 900;
 }
@@ -164,7 +138,7 @@
 }
 .type__legend,
 .type__descript{
-    font-family: 'Orbitron', sans-serif;
+    font-family: var(--mainFont);
     font-size: 1.5rem;
     border-radius: 1rem;
     color: white;
@@ -215,7 +189,7 @@
 }
 .back:hover{
     cursor: pointer;
-    color: 	rgb(105,105,105)
+    color: 	rgb(105,105,105);
 }
 @media ( min-width: 768px ) { 
     .back{
