@@ -49,6 +49,17 @@ useEffect(() => {
   return (
   <main>
         <section className="pokepage__container">
+          <div className="pokepager__ppcontainer">
+          <p className="pokepage__perpage"> Pokemons per page?</p>
+          <select className="pokepage__ppselect">
+            <option value="12">Auto</option>
+            <option value="8">8</option>
+            <option value="12">12</option>
+            <option value="16">16</option>
+            <option value="24">24</option>
+            <option value="30">30</option>
+          </select>
+          </div>
           <p className="pokepage__welcome">Welcome <span className="pokepage__trainer">"{ trainerName }"</span>, here select your favorite pokemon, let's go!</p>
           <form className="pokepage__form" onSubmit={handleSubmit}> 
             <div className="input__container">
