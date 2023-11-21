@@ -1,5 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import DarkMode from '../components/DarkMode/DarkMode'
 //import Pokedexlogo from '../img/poketitle.png'
 import './styles/Layout.css'
 import Pikachu from '../assets/img/pikachugif.gif';
@@ -20,6 +21,10 @@ const Layout = () => {
 
      <div className='blackbar'>
         
+     </div>
+
+     <div className='darkmode'>
+      <DarkMode />
      </div>
 
     <div className='outlet'>

@@ -5,8 +5,11 @@
     border-radius: 1rem;
     font-family: var(--mainFont);
     padding-left: 2rem;
-    border: 3px solid grey;
+    border: 3px solid var(--bordercolor);
     font-weight: 900;
+    background-color: var(--bgInputs);
+    color: var(--fontmc);
+    outline: none;
 }
 .select__type:focus-within{
     box-shadow: 1rem 1rem 25.2rem 0rem rgba(223,254,119,0.75);

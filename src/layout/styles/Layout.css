@@ -1,7 +1,7 @@
 .yellowbar{
     min-width: 100vw;
     height: 10rem;
-    background-color: yellow;
+    background-color: var(--bgyellowbar);
 }
 @media ( min-width: 678px ) { 
     .yellowbar{
@@ -13,7 +13,7 @@
 .blackbar{
     background-color: black;
     min-width: 100vw;
-    height: 4rem;
+    height: 5rem;
 }
 .footer{
     background-color: black;
@@ -29,6 +29,7 @@
 .outlet{
     min-height: calc(100vh - 180px);
     padding: 4rem 5rem 10rem 5rem;
+    background-color: var(--bgoutlet);
 }
 .white__circle{
     width: 12rem;
@@ -99,7 +100,7 @@
     width: 20.28rem;
     height: 3.63rem;
     position: relative;
-    top: 6.3rem;
+    top: 5rem;
     margin-left: 5rem;
     animation: gira 6s infinite;
     transition: filter 2s;

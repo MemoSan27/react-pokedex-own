@@ -77,10 +77,11 @@
     left: 14.6rem;
     height: 6rem;
     background-color: transparent;
-    color: red;
+    color: red!important;
 }
 .go{
     font-size: 5.6rem !important;
+    color: red !important;
 }
 .swal2-popup .swal2-title{
     font-family: 'Orbitron', sans-serif !important;
