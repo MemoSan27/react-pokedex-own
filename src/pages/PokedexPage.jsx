@@ -68,29 +68,34 @@ useEffect(() => {
           </form>
         </section>
 
-    
-        <section>
-        {pokemons?.results[0] 
-        ? <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/> 
-        : <Error> No pokemons found!! </Error> 
-        }
-        </section>
-
-        <article className="pokemons__container">
+        
           {
-            pokemons?.results.map(poke =>(
-              <PokeCard
-              key={poke.url}
-              url={poke.url}
-              />
-            )).slice((page - 1)* perPages, (page - 1)* perPages + perPages)
+            isLoading
+            ? <Loading />
+            : <>
+            <section>
+            {pokemons?.results[0] 
+            ? <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/> 
+            : <Error> No pokemons found!! </Error> 
+            }
+            </section>
+    
+            <article className="pokemons__container">
+              {
+                pokemons?.results.map(poke =>(
+                  <PokeCard
+                  key={poke.url}
+                  url={poke.url}
+                  />
+                )).slice((page - 1)* perPages, (page - 1)* perPages + perPages)
+              }
+            </article>
+    
+            <section>
+              {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
+            </section>
+            </>
           }
-        </article>
-
-        <section>
-          {pokemons?.results[0] && <Pagination quantyPages={quantyPages} page={page} setPage={setPage}/>}
-        </section>
-
   </main>
   
   )
